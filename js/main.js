@@ -19,10 +19,10 @@ var stickyNavigationTop = $('.masthead').offset().top;
 function sticky() {
   var scrolled = $(window).scrollTop();
   if (scrolled > stickyNavigationTop) {
-    $('.masthead').addClass('scrolled sticky');
+    $('.masthead').addClass('sticky');
     $('.social').addClass('sticky');
   } else {
-    $('.masthead').removeClass('scrolled sticky');
+    $('.masthead').removeClass('sticky');
     $('.social').removeClass('sticky');
   }
 }
@@ -45,11 +45,18 @@ $('.lightbox').magnificPopup({
 $('.carousel').slick({
   centerMode: true,
   dots: true,
+  infinite: true,
   initialSlide: 0,
-  mobileFirst: true,
-  nextArrow: '<button type="button" class="slick-next">Convicted Prisoner</button>',
-  prevArrow: '<button type="button" class="slick-prev">Convicted Prisoner</button>',
-  slidesToShow: 3
+  nextArrow: '<button type="button" onclick="return nextcopy()" class="slick-next">Another Accused</button>',
+  prevArrow: '<button type="button" onclick="return prevcopy()" class="slick-prev">Another Accused</button>',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  variableWidth: true
+});
+
+$('.carousel').on('afterChange', function(event, slick, currentSlide){
+	// alert(currentSlide);
+	changeText(currentSlide);
 });
 
 // Help us form validation and ajax
@@ -87,7 +94,11 @@ $('.letter-form form').validate({
         var letterFormHeight = $('.letter-form').outerHeight(),
           letterFormWidth = $('.letter-form').outerWidth();
         // Reset form values
-        $(this).get(0).reset();
+        //$(this).get(0).reset();
+		$('#email').val("");
+		$('#lastname').val("");
+		$('#firstname').val("");
+		ga('send', 'event', 'Submit', 'Click', 'Send A Letter');
 
         $('.thankyou').css({
           'display': 'block',

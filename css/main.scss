@@ -146,13 +146,13 @@ html {
 .masthead {
   background: url('../images/bg-masthead.png') 50% 100% no-repeat;
   padding: 1.84375em 0 3.84375em;
-  -webkit-transition: all .2s;
+  /*-webkit-transition: all .2s;
   transition: all .2s;
   &.scrolled {
     padding: 1em 0 2em;
     -webkit-transition: all .2s;
     transition: all .2s;
-  }
+  }*/
   > div > div {
     display: inline-block;
     vertical-align: top;
@@ -230,7 +230,7 @@ html {
     transform: translateY(-50%);
     -webkit-transition: all .2s;
     transition: all .2s;
-    top: 50%;
+    top: 30%;
     a {
       color: #030303;
       display: block;
@@ -277,11 +277,11 @@ html {
       text-transform: uppercase;
     }
     .top {
-      font-size: 2.5em;
+      font-size: 1.0em;
     }
     .bottom {
-      font-size: 0.75em;
-      letter-spacing: 0.175em;
+      font-size: 1.0em;
+      /* letter-spacing: 0.175em;*/
     }
   }
 }
@@ -304,7 +304,7 @@ html {
     padding: 3.4375em 0 8em;
   }
   .dek {
-    max-width: 20em;
+    max-width: 24em;
     padding-bottom: 2em;
   }
   .steps {
@@ -363,21 +363,22 @@ html {
   padding-bottom: 8em;
   text-align: center;
   .quote {
-    background: url('../images/bg-convicted-quote.png') 0 0 no-repeat;
-    color: #fff;
-    font-size: 2em;
-    height: 57px;
-    line-height: 1.78125;
+    /* background: url('../images/bg-convicted-quote.png') 0 0 no-repeat; */
+    color: #000000;
+    font-size: 2.7em;
+    height: 61px;
+    line-height: 1.58125;
     margin: 0 auto;
     text-align: center;
-    width: 467px;
+    width: 630px;
+	font-weight: bold;
   }
   .carousel {
 
   }
   .bottom {
-    background: url('../images/carousel-bottom-left.png') 0 0 no-repeat,
-                url('../images/carousel-bottom-right.png') 100% 0 no-repeat;
+/*    background: url('../images/carousel-bottom-left.png') 0 0 no-repeat,
+                url('../images/carousel-bottom-right.png') 100% 0 no-repeat; */
     display: inline-block;
     font-family: 'DINCondensed-Regular', sans-serif;
     height: 124px;
@@ -388,9 +389,11 @@ html {
     text-transform: uppercase;
     .subhead {
       font-size: 1.875em;
+	font-weight: bold;
     }
     .subdek {
-      font-size: 1.125em;
+	  padding-top: 20px;
+      font-size: 1.0em;
     }
   }
 }
@@ -501,7 +504,7 @@ html {
   .dek {
 
   }
-  .social {
+  .socialfooter {
     background: url('../images/footer-border.png') 50% 100% no-repeat;
     font: {
       family: 'FestivoLettersNo1', sans-serif;
@@ -549,7 +552,7 @@ html {
   .slick-slide {
     img {
       height: auto;
-      width: 100%;
+      width: 300px; 
     }
   }
   .slick-prev,
@@ -573,16 +576,17 @@ html {
   }
   .slick-prev {
     background: url('../images/carousel-arrow-prev.png') 0 0 no-repeat;
-    left: 23%;
+    left: 17%;
     padding-left: 1em;
   }
   .slick-next {
     background: url('../images/carousel-arrow-next.png') 100% 0 no-repeat;
-    right: 23%;
+    right: 17%;
     padding-right: 1em;
   }
   .slick-dots {
     bottom: -1em;
+	z-index: 100;
     display: block;
     list-style: none;
     margin: 0;

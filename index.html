@@ -5,7 +5,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ink of Innocence</title>
-
+  <meta property="og:url"                content="https://www.inkofinnocence.org" />
+  <meta property="og:type"               content="website" />
+  <meta property="og:title"              content="Ink of Innocence" />
+  <meta property="og:description"        content="Up to 100,000 people in US prisons are innocent. Put DNA that could set them free directly in front of lawmakers." />
+  <meta property="og:image"              content="https://www.inkofinnocence.org/images/fbshare.png" />
   <!-- build:css css/main.css -->
   <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -19,57 +23,58 @@
   <!-- build:js js/jquery.js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <!-- endbuild -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </head>
 <body>
-
+<a name="Home"></a>
 <div class="masthead">
   <div class="wrapper">
     <div class="nav-left">
-      <a href="#Mission">Our<br>Mission</a>
-      <a href="#Process">The<br>Process</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Our Mission');" href="#Mission">Our<br>Mission</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Process');" href="#Process">The<br>Process</a>
       </div>
     <div class="logo">
-      <a href="/">Ink of Innocence</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Ink Of Innocence');" href="#">Ink of Innocence</a>
     </div>
     <div class="nav-right">
-      <a href="#Convicted">The<br>Convicted</a>
-      <a href="#Help">Help<br>Us</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Convicted');" href="#Convicted">The<br>Convicted</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Help Us');" href="#Help">Help<br>Us</a>
     </div>
-    <a href="https://www.cacj.org/Donations.aspx" class="donate" target="_blank">Donate Now</a>
+    <a onclick="ga('send', 'event', 'Outbound_Link', 'Header', 'Donate Now');" href="https://www.cacj.org/Donations.aspx" class="donate" target="_blank">Donate Now</a>
   </div>
 </div>
 <div class="movie">
   <div class="wrapper">
     <div class="social">
-      <a href="https://twitter.com/CACJNews" class="socicon">a</a>
-      <a href="https://www.facebook.com/CACJFanPage?fref=ts" class="socicon">b</a>
-      <a href="http://www.google.com" class="socicon">c</a>
+      <a href="javascript:tweet()" class="socicon">a</a>
+      <a href="javascript:fbShare()" class="socicon">b</a>
+      <a href="javascript:gpShare()" class="socicon">c</a>
     </div>
-    <div class="header">Up to 100,000 people<br>in prison are innocent.</div>
-    <div class="dek">DNA evidence that could prove their innocence is being ignored.</div>
+    <div class="header">Up to 100,000 people in<br>U.S. prisons are innocent.</div>
+    <div class="dek">In many cases, DNA evidence that could<br />prove their innocence is being ignored.</div>
     <div class="video">
-      <a href="https://www.youtube.com/watch?v=kfVsfOSbJY0" class="lightbox">Learn <img src="images/icon-play.png"> More</a>
+      <a href="https://www.youtube.com/watch?v=kfVsfOSbJY0" class="lightbox">Watch <img src="images/icon-play.png"> Video</a>
     </div>
     <div class="letter">
-        <a href="#">
-          <div class="top">Help put DNA</div>
+        <a onclick="ga('send', 'event', 'Navigation', 'Body', 'Send A Letter');" href="javascript:$('html, body').animate({scrollTop: $('.bottom .dek').offset().top}, 1);">
+          <div class="top">Help put DNA of the<br />wrongfully convicted</div>
           <div class="bottom">directly in front of lawmakers.</div>
         </a>
     </div>
   </div>
+<a name="Mission"></a>
 </div>
 <div class="mission">
-  <a name="Mission"></a>
   <div class="wrapper">
     <div class="header">Our Mission</div>
-    <div class="dek">No innocent person should lose their freedom because they aren’t given proper access to DNA testing. In order to give DNA the attention it deserves, we’re putting it in front of lawmakers, literally. We’re creating ink that contains the DNA of prisoners who could be proven innocent, and using that ink to write letters to lawmakers, pleading for change. DNA is irrefutable. The quality of our laws and policies should match the quality of our science so that innocent people don’t have to suffer.</div>
+    <div class="dek">Up to 100,000 people in United States' prisons are innocent. Thousands are serving sentences for crimes they did not commit, because they cannot afford access to the one piece of evidence that can set them free… DNA testing. To shine a spotlight on the evidence that could set the innocent free, we are collecting prisoner DNA and partnering with DNA Technologies in Halifax, Canada. We are turning the DNA into ink. Ink used to give the innocent a face, containing DNA evidence.  Posters and newspaper ads containing DNA evidence. A letter to the governor, a signature on a petition, all written with ink containing DNA evidence. So we are not only getting their voices heard. We will be putting their DNA in the hands of those who have the power to balance the scales and give equal access to DNA testing. Our campaign doesn’t just state their innocence. It could be used to help prove it.</div>
   </div>
 </div>
 <a name="Process"></a>
 <div class="how-it-works">
   <div class="wrapper">
     <div class="header">How It Works</div>
-    <div class="dek">Every drop of our ink contains the DNA of prisoners that could be proven innocent, if tested.</div>
+    <div class="dek">Every drop of our ink contains the DNA of the wrongfully convicted.</div>
     <div class="steps">
       <div class="step1">
         <div class="number">Step 1</div>
@@ -79,12 +84,12 @@
       <div class="step2">
         <div class="number">Step 2</div>
         <div class="subtitle">Turn into ink</div>
-        <div class="subdek">A lab takes the prisoners DNA and uses it to create our ink.</div>
+        <div class="subdek">A lab takes the prisoner DNA and uses it to create our ink.</div>
       </div>
       <div class="step3">
         <div class="number">Step 3</div>
-        <div class="subtitle">Send letters</div>
-        <div class="subdek">We use the ink to spread our message to lawmakers, encouraging change.</div>
+        <div class="subtitle">Promote Justice</div>
+        <div class="subdek">The ink is used to spread our message and bring justice to the wrongfully convicted.</div>
       </div>
     </div>
   </div>
@@ -93,8 +98,6 @@
 <div class="convicted">
   <div class="wrapper">
     <div class="header">The Convicted</div>
-    <div class="dek">THEY'VE TAKEN MY NAME. THEY HAVE TAKEN MY FAMILY</div>
-    <div class="quote">They've taken my life.</div>
     <div class="carousel">
       <div><img src="images/convicted-1.png" alt=""></div>
       <div><img src="images/convicted-2.png" alt=""></div>
@@ -103,37 +106,43 @@
       <div><img src="images/convicted-5.png" alt=""></div>
     </div>
     <div class="bottom">
+      <div class="dek">THEY'VE TAKEN MY NAME. THEY HAVE TAKEN MY FAMILY</div>
+      <div class="quote">They've taken my life.</div>
       <div class="subhead">I am innocent.</div>
-      <div class="subdek">If you don't believe me,<br>believe my ink.</div>
+      <div class="subdek">If you don't believe me, believe my ink.</div>
+	</div>
     </div>
-  </div>
-</div>
 <a name="Help"></a>
+ 
+
+</div>
+
 <div class="help-us">
   <div class="wrapper">  
     <div class="header">Help Us</div>
-    <div class="dek">Send a letter written with DNA evidence to lawmakers, petitioning for change. Enter your name below, and one physical letter will be mailed on your behalf.</div>
+    <div class="dek">Send a letter written with DNA of the wrongfully convicted to lawmakers, asking for change. Enter your name below, and one physical letter will be mailed on your behalf.</div>
     <div class="letter-form">
       <p>Dear Governor Brown,</p>
-      <p>Up to 100,000 people in prison are innocent. The one thing that could set them free is being ignored. Their DNA.</p>
-      <p>To get your attention on this issue, we wanted to put DNA in front of you, literally. The ink in this letter is mixed with human DNA that could set a wrongfully convicted person free, but only if it’s tested.</p>
-      <p>Please help us right the scales of justice and get everyone equal access to DNA testing. I think you would agree, the quality of our laws and policies should match the quality of our science.</p>
-      <p>The power is in your hands.</p>
+      <p>It is estimated that up to 100,000 people in prison in the United States are innocent. And one thing that could set some of them free is being ignored. Their DNA.</p>
+      <p>To get your attention on this issue, we wanted to put DNA in front of you, literally. The ink in this letter is mixed with human DNA that could set a wrongfully convicted man free, but only if it’s tested.</p>
+      <p>Please help us right the scales of justice and give <u><b>everyone</b></u> who needs it equal access to DNA testing. I think you would agree, the quality of our laws, policies, and practices should match the quality of our science.</p>
+      <p>We need to give everyone the same opportunities to be heard. The power is in your hands.</p>
       <p>Sincerely,</p>
+	  <p>[Your Name Here.]</p>
       <form method="post">
         <div class="firstname">
           <label for="firstname">First Name: <span>*</span>
-            <input type="text" name="firstname">
+            <input type="text" id="firstname" name="firstname">
           </label>
         </div>
         <div class="lastname">
           <label for="lastname">Last Name: <span>*</span>
-            <input type="text" name="lastname">
+            <input type="text" id="lastname" name="lastname">
           </label>
         </div>
         <div class="email">
           <label for="email">Email address: <span>*</span>
-            <input type="email" name="email">
+            <input type="email" id="email" name="email">
           </label>
         </div>
         <button type="submit">Send Letter</button>
@@ -142,7 +151,7 @@
       <div class="thankyou">
         <div>
           <div class="top">Thank you<br>for signing!</div>
-          <div class="bottom">Help us spread the word.</div>
+          <div class="bottom">A letter will be sent to lawmakers on your behalf.<br />Please spread the word.</div>
         </div>
       </div>
       <img src="images/letter-logos.png">
@@ -151,27 +160,110 @@
 </div>
 <div class="footer">
   <div class="wrapper">
-    <div class="header">Follow us to stay up-to-date</div>
-    <div class="dek">on Patrick Mcnealand other stories surrounding Ink of Innocence.</div>
-    <div class="social">
-      <a href="https://www.facebook.com/CACJFanPage?fref=ts">Facebook</a>
-      <a href="https://twitter.com/CACJNews">Twitter</a>
+<div class="donate"><div style="display: inline-block;"><a target="_blank" onclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'CACJ');" href="http://www.cacj.org"><img src="images/cacj-logo.png"></a> <a href="https://www.cacj.org/Donations.aspx" target="_blank" onnclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'Donate Now');"><img src="images/masthead-donate-now.png"></a></div><div style="
+    text-align: left;
+    padding-top: -1px;
+    display: inline-block;
+    font-size: 1.3em;">Help the California Attorneys for Criminal Justice<br> balance the scales of justice. Please donate and help give<br>everyone equal access to justice, including DNA testing.</div></div>    
+    <div class="header" style="font-size: 2.3em"><img src="images/topline.png" /><br />Follow Us to Stay Up To Date</div>
+    <div class="socialfooter">
+      <a target="_blank" onclick="ga('send', 'event', 'Footer', 'Share', 'FB');" href="https://www.facebook.com/CACJFanPage?fref=ts">Facebook</a>
+      <a target="_blank" onclick="ga('send', 'event', 'Footer', 'Share', 'Twitter');" href="https://twitter.com/CACJNews">Twitter</a>
       <span class="hashtag">#INKOFINNOCENCE</span>
     </div>
-    <div class="logo"><img src="images/footer-logo-cacj.png"></div>
-    <div class="copyright">Ink of Innocence<br>
+    <div class="copyright">Ink of Innocence 
       &copy; Copyright 2015</div>
   </div>
 </div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-XXXXX-X');ga('send','pageview');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62089806-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+
+var ttext1 = "They’ve taken my name. They’ve taken my family.";
+var btext1 = "They’ve taken my life.";
+var ttext2 = "They’ve taken my freedom. They’ve taken my dignity.";
+var btext2 = "They’ve taken everything.";
+var ttext3 = "They’ve taken my friends. They’ve taken my children.";
+var btext3 = "They haven’t taken my hope.";
+var ttext4 = "They’ve taken my name. They’ve taken my family.";
+var btext4 = "They’ve taken everyone.";
+var ttext5 = "They’ve taken my reputation. They’ve taken my credibility.";
+var btext5 = "They’ve taken my future.";
+var currentslide = 1;
+
+function changeText(slide) {
+	currentslide = slide;
+	if (currentslide == 0) {
+		ttext = ttext1;
+		btext = btext1;
+		$('.bottom .dek').html(ttext);
+		$('.bottom .quote').html(btext);
+		return true;
+	}	
+	if (currentslide == 1) {
+		ttext = ttext2;
+		btext = btext2;
+		$('.bottom .dek').html(ttext);
+		$('.bottom .quote').html(btext);
+		return true;
+	}	
+	if (currentslide == 2) {
+		ttext = ttext3;
+		btext = btext3;
+		$('.bottom .dek').html(ttext);
+		$('.bottom .quote').html(btext);
+		return true;
+	}	
+	if (currentslide == 3) {
+		ttext = ttext4;
+		btext = btext4;
+		$('.bottom .dek').html(ttext);
+		$('.bottom .quote').html(btext);
+		return true;
+	}	
+	if (currentslide == 4) {
+		ttext = ttext5;
+		btext = btext5;
+		$('.bottom .dek').html(ttext);
+		$('.bottom .quote').html(btext);
+		return true;
+	}	
+
+	
+}
+
+function nextcopy() {
+	ga('send', 'event', 'Navigation', 'Click', 'Next Button');
+}
+
+function prevcopy() {
+	ga('send', 'event', 'Navigation', 'Click', 'Previous Button');
+}
+
+
+function fbShare() {
+		ga('send', 'event', 'Navigation', 'Share', 'FB');
+		window.open('https://www.facebook.com/dialog/share?app_id=911788002215384&display=popup&href=https%3A%2F%2Fwww.inkofinnocence.org&redirect_uri=https%3A%2F%2Fwww.inkofinnocence.org', 'sharer', 'top=20,left=50,toolbar=0,status=0,width=626,height=305');
+}
+function gpShare() {
+		ga('send', 'event', 'Navigation', 'Share', 'Google+');
+        window.open('https://plus.google.com/share?url=https%3A//www.inkofinnocence.org', 'sharer', 'top=20,left=50,toolbar=0,status=0,width=626,height=305');
+}
+function tweet() {
+	ga('send', 'event', 'Navigation', 'Share', 'Twitter');
+ 	window.open('https://twitter.com/intent/tweet?text=Up%20to%20100,000%20people%20in%20US%20prisons%20are%20innocent.%20Put%20DNA%20that%20could%20set%20them%20free%20directly%20in%20front%20of%20lawmakers.%20https://inkofinnocence.org', 'sharer', 'top=20,left=50,toolbar=0,status=0,width=626,height=305');
+}
+
 </script>
 
 <!-- build:js js/vendor.js -->
