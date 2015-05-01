@@ -10,6 +10,7 @@
   <meta property="og:title"              content="Ink of Innocence" />
   <meta property="og:description"        content="Up to 100,000 people in US prisons are innocent. Put DNA that could set them free directly in front of lawmakers." />
   <meta property="og:image"              content="https://www.inkofinnocence.org/images/fbshare.png" />
+  
   <!-- build:css css/main.css -->
   <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -34,7 +35,7 @@
       <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Process');" href="#Process">The<br>Process</a>
       </div>
     <div class="logo">
-      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Ink Of Innocence');" href="#">Ink of Innocence</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Ink Of Innocence');" href="#Home">Ink of Innocence</a>
     </div>
     <div class="nav-right">
       <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Convicted');" href="#Convicted">The<br>Convicted</a>
@@ -46,14 +47,14 @@
 <div class="movie">
   <div class="wrapper">
     <div class="social">
-      <a href="javascript:tweet()" class="socicon">a</a>
-      <a href="javascript:fbShare()" class="socicon">b</a>
-      <a href="javascript:gpShare()" class="socicon">c</a>
+      <a href="#" class="socicon twitter">a</a>
+      <a href="#" class="socicon facebook">b</a>
+      <a href="#" class="socicon googleplus">c</a>
     </div>
     <div class="header">Up to 100,000 people in<br>U.S. prisons are innocent.</div>
     <div class="dek">In many cases, DNA evidence that could<br />prove their innocence is being ignored.</div>
     <div class="video">
-      <a href="https://www.youtube.com/watch?v=kfVsfOSbJY0" class="lightbox">Watch <img src="images/icon-play.png"> Video</a>
+      <a href="https://www.youtube.com/watch?v=TCOeQHvtZc0" class="lightbox">Watch <img src="images/icon-play.png"> Video</a>
     </div>
     <div class="letter">
         <a onclick="ga('send', 'event', 'Navigation', 'Body', 'Send A Letter');" href="javascript:$('html, body').animate({scrollTop: $('.bottom .dek').offset().top}, 1);">
@@ -185,84 +186,6 @@
 
   ga('create', 'UA-62089806-1', 'auto');
   ga('send', 'pageview');
-
-</script>
-<script>
-
-var ttext1 = "They’ve taken my name. They’ve taken my family.";
-var btext1 = "They’ve taken my life.";
-var ttext2 = "They’ve taken my freedom. They’ve taken my dignity.";
-var btext2 = "They’ve taken everything.";
-var ttext3 = "They’ve taken my friends. They’ve taken my children.";
-var btext3 = "They haven’t taken my hope.";
-var ttext4 = "They’ve taken my name. They’ve taken my family.";
-var btext4 = "They’ve taken everyone.";
-var ttext5 = "They’ve taken my reputation. They’ve taken my credibility.";
-var btext5 = "They’ve taken my future.";
-var currentslide = 1;
-
-function changeText(slide) {
-	currentslide = slide;
-	if (currentslide == 0) {
-		ttext = ttext1;
-		btext = btext1;
-		$('.bottom .dek').html(ttext);
-		$('.bottom .quote').html(btext);
-		return true;
-	}	
-	if (currentslide == 1) {
-		ttext = ttext2;
-		btext = btext2;
-		$('.bottom .dek').html(ttext);
-		$('.bottom .quote').html(btext);
-		return true;
-	}	
-	if (currentslide == 2) {
-		ttext = ttext3;
-		btext = btext3;
-		$('.bottom .dek').html(ttext);
-		$('.bottom .quote').html(btext);
-		return true;
-	}	
-	if (currentslide == 3) {
-		ttext = ttext4;
-		btext = btext4;
-		$('.bottom .dek').html(ttext);
-		$('.bottom .quote').html(btext);
-		return true;
-	}	
-	if (currentslide == 4) {
-		ttext = ttext5;
-		btext = btext5;
-		$('.bottom .dek').html(ttext);
-		$('.bottom .quote').html(btext);
-		return true;
-	}	
-
-	
-}
-
-function nextcopy() {
-	ga('send', 'event', 'Navigation', 'Click', 'Next Button');
-}
-
-function prevcopy() {
-	ga('send', 'event', 'Navigation', 'Click', 'Previous Button');
-}
-
-
-function fbShare() {
-		ga('send', 'event', 'Navigation', 'Share', 'FB');
-		window.open('https://www.facebook.com/dialog/share?app_id=911788002215384&display=popup&href=https%3A%2F%2Fwww.inkofinnocence.org&redirect_uri=https%3A%2F%2Fwww.inkofinnocence.org', 'sharer', 'top=20,left=50,toolbar=0,status=0,width=626,height=305');
-}
-function gpShare() {
-		ga('send', 'event', 'Navigation', 'Share', 'Google+');
-        window.open('https://plus.google.com/share?url=https%3A//www.inkofinnocence.org', 'sharer', 'top=20,left=50,toolbar=0,status=0,width=626,height=305');
-}
-function tweet() {
-	ga('send', 'event', 'Navigation', 'Share', 'Twitter');
- 	window.open('https://twitter.com/intent/tweet?text=Up%20to%20100,000%20people%20in%20US%20prisons%20are%20innocent.%20Put%20DNA%20that%20could%20set%20them%20free%20directly%20in%20front%20of%20lawmakers.%20https://inkofinnocence.org', 'sharer', 'top=20,left=50,toolbar=0,status=0,width=626,height=305');
-}
 
 </script>
 
