@@ -1,4 +1,4 @@
-// jshint unused:false
+// jshint unused:false, maxlen:false
 // jslint unparm:false
 
 // Smooth scrolling for navigation anchor links
@@ -27,7 +27,7 @@ function sticky() {
   } else {
     $('body').css({
       'padding-top' : '0px'
-    })
+    });
     $('.masthead').removeClass('sticky');
     $('.social').removeClass('sticky');
   }
@@ -76,8 +76,9 @@ $('.carousel').slick({
   variableWidth: true
 });
 
-$('.carousel button').on('click', function (event, slick, currentSlide){
+$('.carousel button').on('click', function (event, slick){
 	var currentSlide = $('.carousel').slick('slickCurrentSlide');
+  console.log('slide ' + currentSlide);
   changeText(currentSlide);
 });
 
@@ -96,9 +97,12 @@ var bottomText = [
   "They’ve taken everyone.",
   "They’ve taken my future."
 ];
-function changeText(slide) {
-  $('.bottom .dek').html(topText[slide]);
-  $('.bottom .quote').html(bottomText[slide]);
+function changeText(currentSlide) {
+  console.log('function currentSlide ' + currentSlide);
+  console.log(topText[currentSlide]);
+  console.log(bottomText[currentSlide]);
+  $('.bottom .dek').html(topText[currentSlide]);
+  $('.bottom .quote').html(bottomText[currentSlide]);
   return true;
 }
 function nextcopy() {

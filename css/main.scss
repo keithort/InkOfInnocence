@@ -20,6 +20,9 @@
 }
 
 // Default Variables
+$font-din: 'DINCondensed-Regular';
+$font-festivo: 'FestivoLettersNo1';
+$font-georgia: Georgia, Times, Times New Roman, serif;
 $font-socicon: 'socicon';
 
 $slick-font-path: "/bower_components/slick-carousel/slick/" !default;
@@ -50,6 +53,9 @@ html {
      -moz-box-sizing: inherit;
           box-sizing: inherit; 
 }
+body {
+  font-family: $font-georgia;
+}
 
 .header {
   font: {
@@ -71,8 +77,10 @@ html {
       display: inline-block;
       height: 6px;
       line-height: 0;
-      position: absolute;
-      top: 0.5em;
+      vertical-align: middle;
+    }
+    &:before {
+      margin-right: 20px;
     }
     &:after {
       margin-left: 20px;
@@ -82,7 +90,6 @@ html {
   .convicted & {
     &:before {
       background: url('../images/header-before-black.png') 0 0 no-repeat;
-      margin-left: -113px;
       width: 93px;
     }
     &:after {
@@ -94,7 +101,6 @@ html {
   .help-us & {
     &:before {
       background: url('../images/header-before-white.png') 0 0 no-repeat;
-      margin-left: -143px;
       width: 123px;
     }
     &:after {
@@ -105,8 +111,8 @@ html {
 }
 .dek {
   font: {
-    family: 'DINCondensed-Regular', sans-serif;
-    size: 1.5em; 
+    family: $font-georgia;
+    size: 1em; 
   }
   line-height: 2;
   margin: 0 auto;
@@ -217,7 +223,7 @@ html {
   }
 }
 .movie {
-  background: url('../images/bg-movie.jpg') 50% 35% no-repeat #fff;
+  background: url('../images/bg-movie.jpg') 50% 30% no-repeat #fff;
   padding: 3.75em 0;
   position: relative;
   .social {
@@ -240,48 +246,68 @@ html {
     }
   }
   .video {
-    font: {
-      family: 'DINCondensed-Regular', sans-serif;
-      size: 1em;   
-    }
-    letter-spacing: .5em;
-    line-height: 5.1875em;
     text-align: center;
-    text-transform: uppercase;
     a {
       color: #030303;
+      display: inline-block;
+      font: {
+        family: 'DINCondensed-Regular', sans-serif;
+        size: 1em;   
+      }
+      letter-spacing: .5em;
+      line-height: 2;
+      margin: 3em auto 1em;
+      text-align: center;
       text-decoration: none;
-      vertical-align: top;
+      text-transform: uppercase;
+      transform: translateY(-50%);
     }
     img {
       height: 83px;
       margin: 0 1em;
+      transform: translateY(50%);
       width: 85px;
     }
   }
   .letter {
-    background: url('../images/bg-letter-arrow.png') 0 0 no-repeat;
     display: block;
-    height: 85px;
     margin: 0 auto;
-    padding: 0.75em;
-    width: 375px;
+    text-align: center;
+    .subdek,
     a {
-      background: url('../images/icon-dna-letter.png') 0 0 no-repeat;
-      color: #fff;
       display: inline-block;
-      font-family: 'DINCondensed-Regular', sans-serif;
+      vertical-align: middle;
+    }
+    .subdek {
+      font-size: 0.875em;
+      line-height: 1.6;
+      margin-right: 2em;
+    }
+    a {
+      background: url('../images/bg-letter-arrow.png') 0 0 no-repeat;
+      color: #fff;
+      font: {
+        family: 'DINCondensed-Regular', sans-serif;
+        size: 1.5em;
+      }
+      height: 76px;
       letter-spacing: .1em;
-      padding-left: 5em;
+      padding: 10px 0 0 70px;
+      position: relative;
+      text-align: left;
       text-decoration: none;
       text-transform: uppercase;
-    }
-    .top {
-      font-size: 1.0em;
-    }
-    .bottom {
-      font-size: 1.0em;
-      /* letter-spacing: 0.175em;*/
+      width: 186px;
+      &:before {
+        background: url('../images/icon-dna-letter.png') 0 0 no-repeat;
+        content: '';
+        display: inline-block;
+        height: 54px;
+        left: 10px;
+        position: absolute;
+        top: 10px;
+        width: 50px;
+      }
     }
   }
 }
@@ -292,7 +318,7 @@ html {
   padding: 7.5em 0 2.2875em;
   text-align: center;
   .wrapper {
-    max-width: 44.375em; // 710px
+    max-width: 40.625em; // 650px
   }
 }
 .how-it-works {
@@ -300,17 +326,13 @@ html {
   font-family: 'DINCondensed-Regular', sans-serif;
   text-align: center; 
   .wrapper {
-    max-width: 44.375em; // 710px
-    padding: 3.4375em 0 8em;
-  }
-  .dek {
-    max-width: 24em;
-    padding-bottom: 2em;
+    max-width: 40.625em; // 650px
+    padding: 5.4375em 0 8em;
   }
   .steps {
     > div {
       display: inline-block;
-      padding: 0 2em;
+      padding: 4em 1em 0;
       text-align: center;
       vertical-align: top;
       width: 32.75%;
@@ -362,38 +384,37 @@ html {
   font-family: 'DINCondensed-Regular', sans-serif;
   padding-bottom: 8em;
   text-align: center;
-  .quote {
+  .quote,
+  .subhead {
     /* background: url('../images/bg-convicted-quote.png') 0 0 no-repeat; */
     color: #000000;
-    font-size: 2.7em;
-    height: 61px;
-    line-height: 1.58125;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.1;
     margin: 0 auto;
     text-align: center;
-    width: 630px;
-	font-weight: bold;
   }
   .carousel {
-
   }
   .bottom {
 /*    background: url('../images/carousel-bottom-left.png') 0 0 no-repeat,
                 url('../images/carousel-bottom-right.png') 100% 0 no-repeat; */
     display: inline-block;
     font-family: 'DINCondensed-Regular', sans-serif;
-    height: 124px;
     letter-spacing: 0.16em;
     margin: 0 auto;
-    padding: 30px 24px 0 37px;
     position: relative;
     text-transform: uppercase;
-    .subhead {
-      font-size: 1.875em;
-	font-weight: bold;
+    img {
+      margin: 0 auto;  
     }
     .subdek {
-	  padding-top: 20px;
-      font-size: 1.0em;
+      font: {
+        family: $font-georgia;
+        size: 1em;
+      }
+      padding-top: 20px;
+      text-transform: none;
     }
   }
 }
@@ -413,7 +434,7 @@ html {
       family: 'Times New Roman', Times, serif;
       size: .75em;
     }
-    margin: 0 auto;
+    margin: 4em auto;
     max-width: 55em;
     padding: 5em;
     position: relative;
@@ -499,61 +520,83 @@ html {
   font: {
     family: 'DINCondensed-Regular', sans-serif;
   }
-  padding: 4.6875em 0 3em 0;
+  padding: 5.6875em 0 3em 0;
   text-align: center;
+  .header {
+    font-size: 1.3em; 
+  }
   .dek {
-
+    display: inline-block;
+    line-height: 1.3; 
   }
   .socialfooter {
-    background: url('../images/footer-border.png') 50% 100% no-repeat;
     font: {
       family: 'FestivoLettersNo1', sans-serif;
-      size: 1.875em;
+      size: 1.1875em;
     }
     line-height: 1.625;
-    margin-bottom: 1.5em;
-    padding: 0.4em 0 1em 0;
+    margin: 1em auto;
+    max-width: 32.1578947em;
+    > img:first-of-type {
+      padding-bottom: .4em;
+    }
+    .subtitle {
+      display: inline-block;
+      padding-right: 1em;
+    }
     a {
       background: url('../images/bg-footer-btn-1.png') 0 0 no-repeat;
+      background-size: contain;
       color: #000;
       display: inline-block;
-      height: 52px;
+      font-size: 0.63157895em;
+      line-height: 2em;
       text-decoration: none;
-      width: 170px;
+      vertical-align: middle;
+      width: 78px;
       + a {
         background-image: url('../images/bg-footer-btn-2.png');
-        width: 152px;
+        width: 68px;
       }
     }
-  }
-  .logo,
-  .copyright {
-    display: inline-block;
-    vertical-align: middle;
-    width: 49%;
+    .hashtag {
+      font-size: 0.63157895em;
+    }
   }
   .logo {
-    padding-right: 1em;
-    text-align: right;
+    display: inline-block;
     img {
-      height: 56px;
-      width: 71px;
+      height: auto;
+      width: 100%;
+    }
+    &.left {
+      padding-right: 1em;
+    }
+    &.right {
+      padding-left: 1em;
     }
   }
   .copyright {
     font-size: .75em;
-    padding-left: 7em;
-    text-align: left;
+    margin: 0 auto;
+    max-width: 50.9166666em;
     text-transform: uppercase;
   }
 }
 
 .carousel { 
   .slick-slide {
+    opacity: .1;
+    -webkit-transition: all .3s;
+    transition: all .3s;
     img {
       height: auto;
-      width: 300px; 
+      max-width: 300px;
+      width: 100%;
     }
+  }
+  .slick-active {
+    opacity: 1;
   }
   .slick-prev,
   .slick-next {
@@ -564,15 +607,17 @@ html {
     display: block;
     font: {
       family: 'DINCondensed-Regular', sans-serif;
-      size: 1.125em;
+      size: .875em;
     }
-    height: 65px;
+    height: 47px;
     margin-top: -32px;
     outline: none;
-    padding: 0;
+    padding: 0.3em 0 0 0;
     position: absolute;
+    text-transform: uppercase;
     top: 50%;
-    width: 130px;
+    transform: translateY(-50%);
+    width: 86px;
   }
   .slick-prev {
     background: url('../images/carousel-arrow-prev.png') 0 0 no-repeat;
@@ -585,8 +630,8 @@ html {
     padding-right: 1em;
   }
   .slick-dots {
-    bottom: -1em;
-	z-index: 100;
+    bottom: 1em;
+  	z-index: 100;
     display: block;
     list-style: none;
     margin: 0;

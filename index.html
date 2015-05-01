@@ -52,15 +52,18 @@
       <a href="#" class="socicon googleplus">c</a>
     </div>
     <div class="header">Up to 100,000 people in<br>U.S. prisons are innocent.</div>
-    <div class="dek">In many cases, DNA evidence that could<br />prove their innocence is being ignored.</div>
+    <div class="dek">In many cases, DNA evidence that could prove their innocence is being ignored.</div>
     <div class="video">
       <a href="https://www.youtube.com/watch?v=TCOeQHvtZc0" class="lightbox">Watch <img src="images/icon-play.png"> Video</a>
     </div>
+
     <div class="letter">
-        <a onclick="ga('send', 'event', 'Navigation', 'Body', 'Send A Letter');" href="javascript:$('html, body').animate({scrollTop: $('.bottom .dek').offset().top}, 1);">
-          <div class="top">Help put DNA of the<br />wrongfully convicted</div>
-          <div class="bottom">directly in front of lawmakers.</div>
-        </a>
+      <div class="subdek">
+        Help put DNA of the<br>wrongfully convicted directly<br>in front of lawmakers.
+      </div>
+      <a onclick="ga('send', 'event', 'Navigation', 'Body', 'Send A Letter');" href="javascript:$('html, body').animate({scrollTop: $('.bottom .dek').offset().top}, 1);">
+        Send a letter
+      </a>
     </div>
   </div>
 <a name="Mission"></a>
@@ -110,6 +113,7 @@
       <div class="dek">THEY'VE TAKEN MY NAME. THEY HAVE TAKEN MY FAMILY</div>
       <div class="quote">They've taken my life.</div>
       <div class="subhead">I am innocent.</div>
+      <img src="images/carousel-line.png">
       <div class="subdek">If you don't believe me, believe my ink.</div>
 	</div>
     </div>
@@ -161,19 +165,22 @@
 </div>
 <div class="footer">
   <div class="wrapper">
-<div class="donate"><div style="display: inline-block;"><a target="_blank" onclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'CACJ');" href="http://www.cacj.org"><img src="images/cacj-logo.png"></a> <a href="https://www.cacj.org/Donations.aspx" target="_blank" onnclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'Donate Now');"><img src="images/masthead-donate-now.png"></a></div><div style="
-    text-align: left;
-    padding-top: -1px;
-    display: inline-block;
-    font-size: 1.3em;">Help the California Attorneys for Criminal Justice<br> balance the scales of justice. Please donate and help give<br>everyone equal access to justice, including DNA testing.</div></div>    
-    <div class="header" style="font-size: 2.3em"><img src="images/topline.png" /><br />Follow Us to Stay Up To Date</div>
+    <div class="logo left">
+      <a target="_blank" onclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'CACJ');" href="http://www.cacj.org"><img src="images/cacj-logo.png"></a> 
+    </div>
+    <div class="dek">Help the California Attorneys for Criminal Justice<br> balance the scales of justice. Please donate and help give<br>everyone equal access to justice, including DNA testing.</div>
+    <div class="logo right">
+      <a href="https://www.cacj.org/Donations.aspx" target="_blank" onnclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'Donate Now');"><img src="images/masthead-donate-now.png"></a>
+    </div>    
     <div class="socialfooter">
+      <img src="images/topline.png" />
+      <div class="subtitle">Follow Us to Stay Up To Date</div>
       <a target="_blank" onclick="ga('send', 'event', 'Footer', 'Share', 'FB');" href="https://www.facebook.com/CACJFanPage?fref=ts">Facebook</a>
       <a target="_blank" onclick="ga('send', 'event', 'Footer', 'Share', 'Twitter');" href="https://twitter.com/CACJNews">Twitter</a>
       <span class="hashtag">#INKOFINNOCENCE</span>
+      <img src="images/topline.png" />
     </div>
-    <div class="copyright">Ink of Innocence 
-      &copy; Copyright 2015</div>
+    <div class="copyright">Ink of Innocence &copy; Copyright 2015</div>
   </div>
 </div>
 
@@ -182,7 +189,7 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-62089806-1', 'auto');
   ga('send', 'pageview');
