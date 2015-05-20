@@ -25,21 +25,22 @@
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <!-- endbuild -->
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script src="http://jwpsrv.com/library/uRMs_P23EeS1vRJtO5t17w.js"></script>
 </head>
 <body>
 <a name="Home"></a>
 <div class="masthead">
   <div class="wrapper">
-    <div class="nav-left">
-      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Our Mission');" href="#Mission">Our<br>Mission</a>
-      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Process');" href="#Process">The<br>Process</a>
-      </div>
     <div class="logo">
       <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Ink Of Innocence');" href="#Home">Ink of Innocence</a>
     </div>
-    <div class="nav-right">
-      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Convicted');" href="#Convicted">The<br>Convicted</a>
-      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Help Us');" href="#Help">Help<br>Us</a>
+    <a href="#" class="mobile"></a>
+    <a href="#" class="close">&times;</a>
+    <div class="nav">
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Our Mission');" href="#Mission"><span>Our</span> Mission</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Process');" href="#Process"><span>The</span> Process</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'The Convicted');" href="#Convicted"><span>The</span> Convicted</a>
+      <a onclick="ga('send', 'event', 'Navigation', 'Header', 'Help Us');" href="#Help"><span>Help</span> Us</a>
     </div>
     <a onclick="ga('send', 'event', 'Outbound_Link', 'Header', 'Donate Now');" href="https://www.cacj.org/Donations.aspx" class="donate" target="_blank">Donate Now</a>
   </div>
@@ -54,12 +55,19 @@
     <div class="header">Up to 100,000 people in<br>U.S. prisons are innocent.</div>
     <div class="dek">In many cases, DNA evidence that could prove their innocence is being ignored.</div>
     <div class="video">
-      <a href="https://www.youtube.com/watch?v=TCOeQHvtZc0" class="lightbox">Watch <img src="images/icon-play.png"> Video</a>
+      <div id='playerdNJ3UFLf'></div>
+      <script type='text/javascript'>
+        jwplayer('playerdNJ3UFLf').setup({
+          playlist: '//content.jwplatform.com/feed/dNJ3UFLf.rss',
+          width: '100%',
+          aspectratio: '16:9'
+        });
+      </script>
     </div>
 
     <div class="letter">
       <div class="subdek">
-        Help put DNA of the<br>wrongfully convicted directly<br>in front of lawmakers.
+        Help put DNA of the wrongfully<br>convicted directly in front of lawmakers.
       </div>
       <a onclick="ga('send', 'event', 'Navigation', 'Body', 'Send A Letter');" href="javascript:$('html, body').animate({scrollTop: $('.bottom .dek').offset().top}, 1);">
         Send a letter
@@ -71,7 +79,10 @@
 <div class="mission">
   <div class="wrapper">
     <div class="header">Our Mission</div>
-    <div class="dek">Up to 100,000 people in United States' prisons are innocent. Thousands are serving sentences for crimes they did not commit, because they cannot afford access to the one piece of evidence that can set them free… DNA testing. To shine a spotlight on the evidence that could set the innocent free, we are collecting prisoner DNA and partnering with DNA Technologies in Halifax, Canada. We are turning the DNA into ink. Ink used to give the innocent a face, containing DNA evidence.  Posters and newspaper ads containing DNA evidence. A letter to the governor, a signature on a petition, all written with ink containing DNA evidence. So we are not only getting their voices heard. We will be putting their DNA in the hands of those who have the power to balance the scales and give equal access to DNA testing. Our campaign doesn’t just state their innocence. It could be used to help prove it.</div>
+    <div class="dek">
+      <p>There are 2.4 million people in jail in the United States. An estimated 100,000 are innocent.  Thousands are serving long sentences for crimes they didn’t commit- because one critical piece of evidence is being ignored. Their DNA.  Social status is one of the main barriers for getting access to this expensive but conclusive method.  And to shine a spotlight on the evidence that could set the innocent free, we are collecting DNA of the wrongfully convicted and turning it into ink.</p>
+      <p>Ink used to give the innocent a face containing DNA evidence, posters, newspaper ads, a letter to the Governor, a pen, a signature on a petition, all containing DNA evidence. So we are not just giving the wrongfully convicted a face, we will be putting their DNA in the hands of those who have the power to balance the scales of justice and give equal access to DNA testing.  Our campaign doesn’t just state their innocence. It can be used to help prove it.</p>
+    </div>
   </div>
 </div>
 <a name="Process"></a>
@@ -83,7 +94,7 @@
       <div class="step1">
         <div class="number">Step 1</div>
         <div class="subtitle">DNA Collection</div>
-        <div class="subdek">We research and collect the DNA from wrongfully convicted prisoners.</div>
+        <div class="subdek">We research and collect DNA from wrongfully convicted prisoners.</div>
       </div>
       <div class="step2">
         <div class="number">Step 2</div>
@@ -130,10 +141,10 @@
       <p>Dear Governor Brown,</p>
       <p>It is estimated that up to 100,000 people in prison in the United States are innocent. And one thing that could set some of them free is being ignored. Their DNA.</p>
       <p>To get your attention on this issue, we wanted to put DNA in front of you, literally. The ink in this letter is mixed with human DNA that could set a wrongfully convicted man free, but only if it’s tested.</p>
-      <p>Please help us right the scales of justice and give <u><b>everyone</b></u> who needs it equal access to DNA testing. I think you would agree, the quality of our laws, policies, and practices should match the quality of our science.</p>
+      <p>Please help us right the scales of justice and give everyone who needs it equal access to DNA testing. I think you would agree, the quality of our laws, policies, and practices should match the quality of our science.</p>
       <p>We need to give everyone the same opportunities to be heard. The power is in your hands.</p>
       <p>Sincerely,</p>
-	  <p>[Your Name Here.]</p>
+	    <p>[Your Name Here.]</p>
       <form method="post">
         <div class="firstname">
           <label for="firstname">First Name: <span>*</span>

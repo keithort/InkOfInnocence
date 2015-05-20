@@ -1,10 +1,19 @@
 // jshint unused:false, maxlen:false
 // jslint unparm:false
 
+// Mobile nav display toggling
+$('a.mobile, a.close').on('click', function () {
+  $('.nav, a.close').toggleClass('active');
+});
+
 // Smooth scrolling for navigation anchor links
 var $root = $('html, body'),
 mastHeadHeight = $('.masthead').outerHeight();
-$('.nav-left a, .nav-right a').on('click', function () {
+$('.nav a').on('click', function () {
+  console.log($(this));
+  if ($('.nav').hasClass('active')) {
+    $('.nav, a.close').removeClass('active');
+  }
   var href = $.attr(this, 'href');
   $root.animate({
     scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top - mastHeadHeight
