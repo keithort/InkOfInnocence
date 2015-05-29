@@ -82,9 +82,13 @@ body {
   margin: 0 auto;
   text-align: center;
   @media screen and ( max-width: 57.8125em ) {
-    font-size: 1.1em;
+    font-size: 1.3em;
+    line-height: 1.5;
     padding-left: 1em;
     padding-right: 1em;
+    .footer & {
+      padding: .5em 0;
+    }
   }
 }
 
@@ -103,31 +107,20 @@ body {
   position: relative;
   width: 100%;
 }
-.sticky {
-  position: fixed !important;
-  z-index: 10;
-  &.masthead {
-    left: 0;
-    top: 0;
-  }
-  .donate {
-    display: none;
-  }
-}
+
 .masthead {
   background: url('../images/bg-masthead.png') 50% 100% no-repeat;
   padding: 1.84375em 0 3.84375em;
   width: 100%;
   @media screen and ( max-width: 50em ) {
-    padding-bottom: 1.84375em;
+    padding: 1.5em 0 2.84375em 0;
   }
-  /*-webkit-transition: all .2s;
-  transition: all .2s;
-  &.scrolled {
-    padding: 1em 0 2em;
-    -webkit-transition: all .2s;
-    transition: all .2s;
-  }*/
+  &.sticky {
+    left: 0;
+    position: fixed !important;
+    top: 0;
+    z-index: 200;
+  }
   > div > div {
     display: inline-block;
     vertical-align: top;
@@ -146,8 +139,13 @@ body {
       width: 323px;
       @media screen and ( max-width: 50em ) {
         background-size: contain;
+        height: 50px;
         margin: 0 0 0 1em;
-        width: 250px;
+        width: 220px;
+      }
+      @media screen and (orientation: landscape) {
+        height: 50px;
+        width: 200px;
       }
     }
   }
@@ -276,6 +274,9 @@ body {
   .video {
     margin: 2em auto;
     max-width: 80%;
+    @media screen and ( max-width: 57.8125em ) {
+      max-width: 93%;
+    }
   }
   .letter {
     display: block;
@@ -293,6 +294,10 @@ body {
       font-size: 0.875em;
       line-height: 1.6;
       margin-right: 2em;
+      @media screen and ( max-width: 57.8125em ) {
+        font-size: 1.2em;
+        margin: 0 0 1em 0;
+      }
     }
     a {
       background: url('../images/bg-letter-arrow.png') 0 0 no-repeat;
@@ -333,10 +338,14 @@ body {
   padding: 7.5em 0 2.2875em;
   text-align: center;
   @media screen and ( max-width: 57.8125em ) {
-    padding-top: 11.5em;
+    background-position-y: -6em;
+    padding-top: 4em;
   }
   .wrapper {
     max-width: 41em; // 656px
+    @media screen and ( max-width: 57.8125em ) {
+      max-width: 100%;
+    }    
   }
 }
 .how-it-works {
@@ -347,7 +356,7 @@ body {
     max-width: 40.625em; // 650px
     padding: 5.4375em 0 8em;
     @media screen and ( max-width: 57.8125em ) {
-      padding-top: 3.4375em;
+      padding: 3.4375em 0 4em;
     }
   }
   .steps {
@@ -359,7 +368,7 @@ body {
       width: 32.75%;
       @media screen and ( max-width: 57.8125em ) {
         display: block;
-        padding: 1em 0;
+        padding: .7em 0;
         width: 100%;
       }
     }
@@ -418,11 +427,15 @@ body {
       family: 'DINCondensed-Regular';
       size: 1.125em;
     }
+    @media screen and ( max-width: 57.8125em ) {
+      font-size: 1.4em;
+    }
   }
   .dek,
   .subdek {
     @media screen and ( max-width: 57.8125em ) {
       margin: 0 auto;
+      padding: 0;
       max-width: 70%;
     } 
   }
@@ -432,6 +445,9 @@ body {
   font-family: 'DINCondensed-Regular', sans-serif;
   padding-bottom: 8em;
   text-align: center;
+  @media screen and ( max-width: 57.8125em ) {
+    padding-bottom: 5em;
+  }
   .quote,
   .subhead {
     /* background: url('../images/bg-convicted-quote.png') 0 0 no-repeat; */
@@ -441,12 +457,13 @@ body {
     line-height: 1.1;
     margin: 0 auto;
     text-align: center;
+    @media screen and ( max-width: 57.8125em ) {
+      font-size: 2.25em;
+    }
   }
   .carousel {
   }
   .bottom {
-/*    background: url('../images/carousel-bottom-left.png') 0 0 no-repeat,
-                url('../images/carousel-bottom-right.png') 100% 0 no-repeat; */
     display: inline-block;
     font-family: 'DINCondensed-Regular', sans-serif;
     letter-spacing: 0.16em;
@@ -454,7 +471,11 @@ body {
     position: relative;
     text-transform: uppercase;
     img {
-      margin: 0 auto;  
+      margin: 0 auto;
+    }
+    .dek {
+      font-size: .9em;
+      letter-spacing: .1em;
     }
     .subdek {
       font: {
@@ -488,6 +509,7 @@ body {
     position: relative;
     @media screen and ( max-width: 57.8125em ) {
       margin: 3em 1em;
+      max-width: 100%;
       padding: 2em;
     }
     p {
@@ -596,14 +618,17 @@ body {
   padding: 5.6875em 0 3em 0;
   text-align: center;
   @media screen and ( max-width: 57.8125em ) {
-    padding: 4.6875em 1em 1.5em 1em;
+    padding: 3.6875em 1em 1.5em 1em;
   }
   .header {
     font-size: 1.3em; 
   }
   .dek {
     display: inline-block;
-    line-height: 1.3; 
+    line-height: 1.3;
+    @media screen and ( max-width: 57.8125em ) {
+      font-size: 1.1em;
+    }
   }
   .socialfooter {
     font: {
@@ -613,6 +638,9 @@ body {
     line-height: 1.625;
     margin: 1em auto;
     max-width: 32.1578947em;
+    @media screen and ( max-width: 57.8125em ) {
+      margin: .75em auto;
+    }
     > img {
       @media screen and ( max-width: 57.8125em ) {
         height: auto;
@@ -621,10 +649,17 @@ body {
     }
     > img:first-of-type {
       padding-bottom: .4em;
+      @media screen and ( max-width: 57.8125em ) {
+        padding-bottom: .9em;
+      }
     }
     .subtitle {
       display: inline-block;
       padding-right: 1em;
+      @media screen and ( max-width: 57.8125em ) {
+        display: block;
+        text-align: center;
+      }
     }
     a {
       background: url('../images/bg-footer-btn-1.png') 0 0 no-repeat;
@@ -637,18 +672,19 @@ body {
       vertical-align: middle;
       width: 78px;
       @media screen and ( max-width: 57.8125em ) {
-        width: 48px;
+        font-size: 1em;
       }
       + a {
         background-image: url('../images/bg-footer-btn-2.png');
         width: 68px;
-        @media screen and ( max-width: 57.8125em ) {
-          width: 45px;
-        }
       }
     }
     .hashtag {
       font-size: 0.63157895em;
+      @media screen and ( max-width: 57.8125em ) {
+        display: block;
+        font-size: 1.2em;
+      }
     }
   }
   .logo {
@@ -656,6 +692,9 @@ body {
     img {
       height: auto;
       width: 100%;
+      @media screen and ( max-width: 57.8125em ) {
+        width: 70%;
+      }
     }
     &.left {
       padding-right: 1em;
@@ -708,6 +747,7 @@ body {
     width: 86px;
     @media screen and ( max-width: 57.8125em ) {
       bottom: -10px;
+      font-size: 1em;
       top: initial;
       z-index: 110;
     }

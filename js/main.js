@@ -56,8 +56,8 @@ $('.carousel').slick({
   dots: true,
   infinite: true,
   initialSlide: 0,
-  nextArrow: '<button type="button" class="slick-next">Another Accused</button>',
-  prevArrow: '<button type="button" class="slick-prev">Another Accused</button>',
+  nextArrow: '<button type="button" class="slick-next">Another Convicted</button>',
+  prevArrow: '<button type="button" class="slick-prev">Another Convicted</button>',
   slidesToShow: 1,
   slidesToScroll: 1,
   variableWidth: true
