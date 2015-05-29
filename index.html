@@ -49,18 +49,13 @@
   <div class="wrapper">
     <div class="header"><span>Up to 100,000 people in</span> U.S. prisons are innocent.</div>
     <div class="dek">In many cases, DNA evidence that could prove their innocence is being ignored.</div>
-    <div class="video">
-      <div id='player6atB922t'></div>
-      <script type='text/javascript'>
-          jwplayer('player6atB922t').setup({
-              playlist: '//content.jwplatform.com/feed/6atB922t.rss',
-              width: '100%',
-              aspectratio: '16:9',
-              skin: 'glow'
-          });
-      </script>
-    </div>
-
+  </div>
+</div>
+<div class="video">
+  <div id='player6atB922t'></div>
+</div>
+<div class="movie">
+  <div class="wrapper">
     <div class="letter">
       <div class="subdek">
         <span>Help put DNA of the wrongfully</span> convicted directly in front of lawmakers.
@@ -174,13 +169,13 @@
     <div class="logo left">
       <a target="_blank" onclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'CACJ');" href="http://www.cacj.org"><img src="images/cacj-logo.png"></a> 
     </div>
-    <div class="dek">Help the California Attorneys for Criminal Justice<br> balance the scales of justice. Please donate and help give<br>everyone equal access to justice, including DNA testing.</div>
+    <div class="dek">Help the California Association of Criminal Justice balance the scales of justice. Please donate and help everyone get equal access to DNA testing.</div>
     <div class="logo right">
-      <a href="https://www.cacj.org/Donations.aspx" target="_blank" onnclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'Donate Now');"><img src="images/masthead-donate-now.png"></a>
+      <a href="https://www.cacj.org/Donations.aspx" target="_blank" onnclick="ga('send', 'event', 'Outbound_Link', 'Footer', 'Donate Now');" class="donate">Donate Now</a>
     </div>    
     <div class="socialfooter">
       <img src="images/topline.png" />
-      <div class="subtitle">Follow Us to Stay Up To Date</div>
+      <div class="subtitle">Follow Us to Stay Up To Date Patrick McNeal</div>
       <a target="_blank" onclick="ga('send', 'event', 'Footer', 'Share', 'FB');" href="https://www.facebook.com/CACJFanPage?fref=ts">Facebook</a>
       <a target="_blank" onclick="ga('send', 'event', 'Footer', 'Share', 'Twitter');" href="https://twitter.com/CACJNews">Twitter</a>
       <span class="hashtag">#INKOFINNOCENCE</span>
@@ -200,6 +195,12 @@
   ga('create', 'UA-62089806-1', 'auto');
   ga('send', 'pageview');
 
+  jwplayer('player6atB922t').setup({
+    playlist: '//content.jwplatform.com/feed/6atB922t.rss',
+    width: '100%',
+    aspectratio: '16:9',
+    skin: 'glow'
+  });
 </script>
 
 <!-- build:js js/vendor.js -->

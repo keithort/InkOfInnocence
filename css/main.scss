@@ -82,7 +82,7 @@ body {
   margin: 0 auto;
   text-align: center;
   @media screen and ( max-width: 57.8125em ) {
-    font-size: 1.3em;
+    font-size: 1.5em;
     line-height: 1.5;
     padding-left: 1em;
     padding-right: 1em;
@@ -112,6 +112,7 @@ body {
   background: url('../images/bg-masthead.png') 50% 100% no-repeat;
   padding: 1.84375em 0 3.84375em;
   width: 100%;
+  z-index: 200;
   @media screen and ( max-width: 50em ) {
     padding: 1.5em 0 2.84375em 0;
   }
@@ -119,7 +120,6 @@ body {
     left: 0;
     position: fixed !important;
     top: 0;
-    z-index: 200;
   }
   > div > div {
     display: inline-block;
@@ -135,15 +135,14 @@ body {
       background: url('../images/logo.png') 0 0 no-repeat;
       display: block;
       height: 72px;
-      margin: 0 2em 0 0;
       width: 323px;
       @media screen and ( max-width: 50em ) {
         background-size: contain;
         height: 50px;
-        margin: 0 0 0 1em;
+        margin-left: 1em;
         width: 220px;
       }
-      @media screen and (orientation: landscape) {
+      @media screen and (orientation: landscape) and (max-width: 50em) {
         height: 50px;
         width: 200px;
       }
@@ -193,7 +192,8 @@ body {
       size: 1em;
     }
     line-height: 1.3;
-    width: 28em;
+    padding-left: 1em;
+    width: 30em;
     @media screen and ( max-width: 50em ) {
       display: none;
       padding-top: 20px;
@@ -210,8 +210,7 @@ body {
       z-index: 100;
     }
     a {
-      min-width: 5.625em; // 90px
-      padding: 1em 1.5em;
+      padding: 1em 2em;
       position: relative;
       text-align: center;
       text-transform: uppercase;
@@ -271,11 +270,9 @@ body {
       display: inline;
     }
   }
-  .video {
-    margin: 2em auto;
-    max-width: 80%;
+  .dek {
     @media screen and ( max-width: 57.8125em ) {
-      max-width: 93%;
+      font-size: 2em;
     }
   }
   .letter {
@@ -295,7 +292,7 @@ body {
       line-height: 1.6;
       margin-right: 2em;
       @media screen and ( max-width: 57.8125em ) {
-        font-size: 1.2em;
+        font-size: 1.6em;
         margin: 0 0 1em 0;
       }
     }
@@ -331,6 +328,13 @@ body {
     }
   }
 }
+.video:not(html) {
+  margin: 0 auto;
+  max-width: 46.25em;
+  @media screen and ( max-width: 57.8125em ) {
+    max-width: 93%;
+  }
+}
 .mission {
   background: url('../images/bg-mission-top.png') 50% 0 no-repeat;
   color: #f6f5f1;
@@ -338,14 +342,19 @@ body {
   padding: 7.5em 0 2.2875em;
   text-align: center;
   @media screen and ( max-width: 57.8125em ) {
-    background-position-y: -6em;
-    padding-top: 4em;
+    background-position-y: -5em;
+    padding: 4em 0 1em 0;
   }
   .wrapper {
     max-width: 41em; // 656px
     @media screen and ( max-width: 57.8125em ) {
       max-width: 100%;
-    }    
+    }
+  }
+  .dek {
+    @media screen and ( max-width: 57.8125em ) {
+      font-size: 1.4em;
+    }
   }
 }
 .how-it-works {
@@ -428,7 +437,7 @@ body {
       size: 1.125em;
     }
     @media screen and ( max-width: 57.8125em ) {
-      font-size: 1.4em;
+      font-size: 1.5em;
     }
   }
   .dek,
@@ -436,7 +445,7 @@ body {
     @media screen and ( max-width: 57.8125em ) {
       margin: 0 auto;
       padding: 0;
-      max-width: 70%;
+      max-width: 80%;
     } 
   }
 }
@@ -474,8 +483,14 @@ body {
       margin: 0 auto;
     }
     .dek {
-      font-size: .9em;
+      font: {
+        family: $font-din;
+        size: .9em;
+      }
       letter-spacing: .1em;
+      @media screen and ( max-width: 57.8125em ) {
+        font-size: 1.1em;
+      }
     }
     .subdek {
       font: {
@@ -491,7 +506,7 @@ body {
   background: url('../images/bg-help-us.jpg') 50% 0 no-repeat;
   color: #fff;
   .wrapper {
-    padding-bottom: 2.66666667em;
+    padding-bottom: 1.5em;
   }
   .dek {
     max-width: 27.0833333em;
@@ -509,6 +524,7 @@ body {
     position: relative;
     @media screen and ( max-width: 57.8125em ) {
       margin: 3em 1em;
+      padding-top: 1em;
       max-width: 100%;
       padding: 2em;
     }
@@ -522,6 +538,7 @@ body {
     padding: 2em 0;
     @media screen and ( max-width: 57.8125em ) {
       font-size: 1.5em;
+      padding: 1em 0;
     }
     > div {
       display: inline-block;
@@ -615,7 +632,7 @@ body {
   font: {
     family: 'DINCondensed-Regular', sans-serif;
   }
-  padding: 5.6875em 0 3em 0;
+  padding: 5.6875em 0 1em 0;
   text-align: center;
   @media screen and ( max-width: 57.8125em ) {
     padding: 3.6875em 1em 1.5em 1em;
@@ -627,7 +644,7 @@ body {
     display: inline-block;
     line-height: 1.3;
     @media screen and ( max-width: 57.8125em ) {
-      font-size: 1.1em;
+      font-size: 1.25em;
     }
   }
   .socialfooter {
@@ -701,6 +718,27 @@ body {
     }
     &.right {
       padding-left: 1em;
+    }
+  }
+  .donate {
+    background: url('../images/footer-donate-arrow.png') 0 0 no-repeat;
+    color: #000;
+    display: inline-block;
+    font: {
+      family: 'DINCondensed-Regular', sans-serif;
+      size: 1.03125em;
+    }
+    line-height: 2.78787879;
+    margin-bottom: 1em;
+    padding-right: 1em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    width: 136px;
+    @media screen and ( max-width: 57.8125em ) {
+      font-size: 1.5em;
+      margin: 0;
     }
   }
   .copyright {

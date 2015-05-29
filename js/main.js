@@ -43,7 +43,9 @@ $(window).on('scroll', function () {
   sticky();
   $('.masthead.sticky').css('width', window.innerWidth + ('px'));
   if(navigator.platform.indexOf('iPad') > -1 || navigator.platform.indexOf('iPhone') > -1 || navigator.platform.indexOf('iPod') > -1) {
-    $('.masthead.sticky').css('position', 'fixed'); 
+    $('.masthead.sticky').css({
+      'position': 'fixed'
+    }); 
   }
 });
 $(window).resize(function () {
